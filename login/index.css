@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+  .container{
+   width: 100%;
+   height: 100vh;
+   font-family: sans-serif;
+   background: url("../images/login_card.png") center/cover no-repeat;
+   color: #151515;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  
+   
+  }
+  .card{
+    width: 350px;
+    height: 500px;
+    box-shadow: 0 0 40px 20px rgb(19, 19, 19);
+    perspective: 1000px;
+  }
+  .inner-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style:preserve-3d;
+    transition: transform 1s;
+ }
+ .card-front, .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(127, 116, 170, 0),rgba(103, 150, 212, 0.8)),url("../images/login_card.png");
+    padding: 55px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+}
+.card-back{
+    transform:rotateY(180deg);
+}
+.card h2{
+    font-weight: normal;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.input-box{
+    width: 100%;
+    background: transparent;
+    border: 3px solid #0b0b0b;
+    margin: 6px 0;
+    height: 32px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color: #0f0f0f;
+    font-size: 20px;
+}
+::placeholder{
+    color: #0f0f0f;
+    font-size: 12px;
+}
+button{
+    width: 100%;
+    background: transparent;
+    border: 3px solid#0f0f0f;
+    margin: 35px 0 10px;
+    height: 32px;
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    color:#100f0f;
+    cursor: pointer;
+}
+.submit-btn{
+    position: relative;
+}
+.submit-btn::after{
+    content: 100px;
+    color: #0f0f0f;
+    line-height: 32px;
+    font-size: 17px;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background: hsl(0, 36%, 95%);
+    position: absolute;
+    right: -1px;
+    top: -1px;
+}
+span{
+    font-size: 13px;
+    margin-left: 10px;
+}
+.card .btn{
+    margin-top: 70px;
+}
+.card a{
+    color:#fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    margin-top: 8px;
+
+}
